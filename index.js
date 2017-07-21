@@ -25,7 +25,7 @@ function extract (endpoint, options, done) {
   }
 }
 
-function extractData (endpoint, done) {
+function extractData (endpoint, body, done) {
   done(null, parse(body, { endpoint }))
 }
 
