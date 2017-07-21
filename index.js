@@ -12,6 +12,7 @@ function extract (endpoint, options, done) {
     options = {}
   }
   options.url = endpoint
+  console.log('extract', endpoint, options);
 
   request(options, gotResponse)
 
