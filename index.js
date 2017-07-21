@@ -105,4 +105,8 @@ function camelCase (name) {
   )
 }
 
-module.exports = extract
+// module.exports = extract
+module.exports = {
+  extract: extract,
+  parse: parse
+};
