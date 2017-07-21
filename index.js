@@ -12,7 +12,6 @@ function extract (endpoint, options, done) {
     options = {}
   }
   options.url = endpoint
-  console.log('extract', endpoint, options);
 
   request(options, gotResponse)
 
@@ -24,6 +23,10 @@ function extract (endpoint, options, done) {
 
     done(null, parse(body, { endpoint }))
   }
+}
+
+function extractData (endpoint, done) {
+  done(null, parse(body, { endpoint }))
 }
 
 function parse (body, { endpoint }) {
@@ -109,5 +112,5 @@ function camelCase (name) {
 // module.exports = extract
 module.exports = {
   extract: extract,
-  parse: parse
+  extractData: extractData
 };
